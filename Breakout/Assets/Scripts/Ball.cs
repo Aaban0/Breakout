@@ -11,6 +11,8 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private int counter = 0; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,9 @@ public class Ball : MonoBehaviour
         startPosition = transform.position;
         //gets rigidbody component
         rb = GetComponent<Rigidbody2D>();
+
+        //sets the velocity of the ball 
+        rb.velocity = Vector2.down * 8f;
     }
 
     // Update is called once per frame
@@ -38,7 +43,19 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag.Equals("Brick"))
         {
             Destroy(collision.gameObject);
-        }   
+        }
+
+        /*PLACEHOLDER LOGIC FOR ORANGE BLOCK*/
+
+        if (collision.gameObject.tag.Equals("Strong Brick"))
+        {
+            counter++;
+            if (counter == 2)
+            {
+                Destroy(collision.gameObject);
+                counter = 0;
+            }
+        }
     }
 
     private void DeathCondition()
@@ -48,8 +65,8 @@ public class Ball : MonoBehaviour
         {
             //ball reset to stating position 
             transform.position = startPosition;
-            //resets the velocity 
-            rb.velocity = Vector3.zero;
+            //resets the velocity to its inital velocity
+            rb.velocity = Vector2.down * 8f;
 
             Debug.Log("GAME OVER!");
         }
