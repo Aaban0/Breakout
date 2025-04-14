@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Ball : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    int score { get; set; } = 0;
+    public TextMeshProUGUI scoreTxt;
+
     private int counter = 0; 
 
-    // Start is called before the first frame update
+    public StrongBrick strongBrick;
+
     void Start()
     {
         //gets starting position 
@@ -23,6 +28,8 @@ public class Ball : MonoBehaviour
 
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
+
+        strongBrick = FindObjectOfType<StrongBrick>();
     }
 
     // Update is called once per frame
@@ -36,6 +43,7 @@ public class Ball : MonoBehaviour
         }
 
         DeathCondition();
+        StrongBrick();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,6 +51,8 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag.Equals("Brick"))
         {
             Destroy(collision.gameObject);
+            score += 100;
+            scoreTxt.text = score.ToString("000000");
         }
 
         /*PLACEHOLDER LOGIC FOR ORANGE BLOCK*/
@@ -50,7 +60,8 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag.Equals("Strong Brick"))
         {
             counter++;
-            if (counter == 2)
+
+            if (collision.gameObject.tag.Equals("Strong Brick") && counter == 2)
             {
                 Destroy(collision.gameObject);
                 counter = 0;
@@ -71,4 +82,18 @@ public class Ball : MonoBehaviour
             Debug.Log("GAME OVER!");
         }
     }
+
+    private void StrongBrick()
+    {
+        if (strongBrick.IsDestroyed() == true)
+        {
+            score += 250;
+            scoreTxt.text = score.ToString("000000");
+        }
+    }
+
+    /*public void AddScore(int amount)
+    {
+        score += amount;
+    }*/
 }
