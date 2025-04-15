@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Ball : MonoBehaviour
 
     public GameObject healthBoostPrefab;
     public GameObject gameOver;
+
+    public Image healthbar;
 
     void Start()
     {
@@ -86,10 +89,14 @@ public class Ball : MonoBehaviour
 
             //player is damaged
             health.Damage(30);
-            if (health.healthCurrent <= 0)
+            if (healthbar.fillAmount <= 0)
             {
                 gameOver.SetActive(true);
             }
+            /*if (health.healthCurrent <= 0)
+            {
+                gameOver.SetActive(true);
+            }*/
             Debug.Log("HIT!");
 
 

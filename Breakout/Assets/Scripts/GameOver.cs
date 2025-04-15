@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
     public PlayerHealth health;
     public GameObject gameOver;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,19 @@ public class GameOver : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+    }
+
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        gameObject.SetActive(false);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 }

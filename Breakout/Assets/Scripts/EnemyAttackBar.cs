@@ -13,7 +13,8 @@ public class EnemyAttackBar : MonoBehaviour
     private float attackMax = 100;
     private float attack = 0;
 
-    
+    public GameObject gameOver;
+
     void Update()
     {
         //variable attack incrases over time, miltiplied by 10 to make it faster 
@@ -27,6 +28,11 @@ public class EnemyAttackBar : MonoBehaviour
             //player gets damaged and attack value is reset
             playerHealth.Damage(20);
             attack = 0;
+        }
+
+        if (playerHealthBar.fillAmount <= 0)
+        {
+            gameOver.SetActive(true);
         }
     }
 }
