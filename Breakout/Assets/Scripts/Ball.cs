@@ -5,7 +5,7 @@ using TMPro;
 
 public class Ball : MonoBehaviour
 {
-    private float deathY = -6f;
+    private float deathY = -6.5f;
     private Vector3 startPosition;
 
     [SerializeField] float velocityLimit = 15f;
@@ -15,11 +15,10 @@ public class Ball : MonoBehaviour
     int score { get; set; } = 0;
     public TextMeshProUGUI scoreTxt;
 
-    private int counter = 0; 
-
-
     public PlayerHealth health;
-    public PlayerHealth enemyHealth;
+    public EnemyHealth enemyHealth;
+
+    public GameObject healthBoostPrefab;
 
     void Start()
     {
@@ -31,10 +30,8 @@ public class Ball : MonoBehaviour
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
 
-        //strongBrick = FindObjectOfType<StrongBrick>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if velocity exceeds the max
@@ -46,6 +43,7 @@ public class Ball : MonoBehaviour
 
         DeathCondition();
         //StrongBrick();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,18 +60,11 @@ public class Ball : MonoBehaviour
             {
                 Debug.Log("YOU WIN!");
             }
-        }
 
-        /*PLACEHOLDER LOGIC FOR ORANGE BLOCK*/
-
-        if (collision.gameObject.tag.Equals("Strong Brick"))
-        {
-            counter++;
-
-            if (collision.gameObject.tag.Equals("Strong Brick") && counter == 2)
+            int randomInt = Random.Range(1, 5);
+            if (randomInt == 1)
             {
-                Destroy(collision.gameObject);
-                counter = 0;
+                Instantiate(healthBoostPrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
             }
         }
     }

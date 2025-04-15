@@ -292,8 +292,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 932869265}
-  - {fileID: 1663423648}
   - {fileID: 476346186}
+  - {fileID: 1663423648}
   - {fileID: 677691401}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -486,7 +486,7 @@ Transform:
   - {fileID: 539285240}
   - {fileID: 185763701}
   m_Father: {fileID: 244079546}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492041119
 GameObject:
@@ -1252,7 +1252,8 @@ MonoBehaviour:
   velocityLimit: 15
   scoreTxt: {fileID: 932869266}
   health: {fileID: 1257784463}
-  enemyHealth: {fileID: 1037075493}
+  enemyHealth: {fileID: 1037075495}
+  healthBoostPrefab: {fileID: 137424025961256189, guid: c5d2b024732922c44935769b407cb659, type: 3}
 --- !u!1 &1019417531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037075492}
   - component: {fileID: 1037075491}
-  - component: {fileID: 1037075493}
+  - component: {fileID: 1037075495}
   - component: {fileID: 1037075494}
   m_Layer: 0
   m_Name: Enemy
@@ -1415,21 +1416,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1037075493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037075490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29ff5f4f792bef4ca9dfaf4033ab69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 185763699}
-  healthCurrent: 100
-  healthMax: 100
 --- !u!114 &1037075494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,6 +1431,21 @@ MonoBehaviour:
   playerHealth: {fileID: 1257784463}
   playerHealthBar: {fileID: 450365957}
   attackBar: {fileID: 789756377}
+--- !u!114 &1037075495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037075490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d041c3034767cf647bb10c72fde13e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 185763699}
+  healthCurrent: 100
+  healthMax: 100
 --- !u!1 &1188963086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1640,7 @@ GameObject:
   - component: {fileID: 1257784463}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1802,7 +1803,7 @@ Transform:
   - {fileID: 1019417532}
   - {fileID: 450365956}
   m_Father: {fileID: 244079546}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1742178156
 GameObject:

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
-    //values for the players health
     public Image healthBar;
     public float healthCurrent = 100;
     public float healthMax = 100;
@@ -17,14 +16,6 @@ public class PlayerHealth : MonoBehaviour
 
         //passes in parameter damage, when called it will take away from the players health
         healthCurrent -= damage;
-        //changes the fill of the healthbar to the value of health / 100 to get a percentace value 
-        healthBar.fillAmount = healthCurrent / healthMax;
-    }
-
-    public void Heal(float heal)
-    {
-        //heals the players health 
-        healthCurrent += heal;
         //changes the fill of the healthbar to the value of health / 100 to get a percentace value 
         healthBar.fillAmount = healthCurrent / healthMax;
     }
