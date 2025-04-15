@@ -69,7 +69,7 @@ public class Ball : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene().name == "Level_2")
             {
-                enemyHealth.Damage(3.6f);
+                enemyHealth.Damage(3.65f);
             }
 
             //if enemy health is 0 then player wins round

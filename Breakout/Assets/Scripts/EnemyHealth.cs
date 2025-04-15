@@ -19,4 +19,12 @@ public class EnemyHealth : MonoBehaviour
         //changes the fill of the healthbar to the value of health / 100 to get a percentace value 
         healthBar.fillAmount = healthCurrent / healthMax;
     }
+
+    private void Update()
+    {
+        if (healthCurrent <= 0)
+        {
+            healthCurrent = 0;
+        }
+    }
 }
