@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
     public EnemyHealth enemyHealth;
 
     public GameObject healthBoostPrefab;
+    public GameObject gameOver;
 
     void Start()
     {
@@ -85,12 +86,13 @@ public class Ball : MonoBehaviour
 
             //player is damaged
             health.Damage(30);
-            Debug.Log("HIT!");
-
             if (health.healthCurrent <= 0)
             {
-                Debug.Log("GAME OVER!");
+                gameOver.SetActive(true);
             }
+            Debug.Log("HIT!");
+
+
         }
     }
 
