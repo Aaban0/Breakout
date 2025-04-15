@@ -9,13 +9,6 @@ public class GameOver : MonoBehaviour
     public PlayerHealth health;
     public GameObject gameOver;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +26,6 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         
     }
-
     public void MainMenu()
     {
         SceneManager.LoadScene("Main_Menu");

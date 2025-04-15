@@ -22,6 +22,7 @@ public class Ball : MonoBehaviour
     public GameObject healthBoostPrefab;
     public GameObject gameOver;
 
+    public GameObject youWin;
     public Image healthbar;
 
     void Start()
@@ -64,7 +65,7 @@ public class Ball : MonoBehaviour
             //if enemy health is 0 then player wins round
             if (enemyHealth.healthCurrent <= 0)
             {
-                Debug.Log("YOU WIN!");
+                youWin.SetActive(true);
             }
 
             //1 in 5 chance for the health boost to spawn
