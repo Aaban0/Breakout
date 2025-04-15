@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
 
 
     public PlayerHealth health;
+    public PlayerHealth enemyHealth;
 
     void Start()
     {
@@ -54,6 +55,13 @@ public class Ball : MonoBehaviour
             Destroy(collision.gameObject);
             score += 100;
             scoreTxt.text = score.ToString("000000");
+
+            enemyHealth.Damage(3.34f);
+
+            if (enemyHealth.healthCurrent <= 0)
+            {
+                Debug.Log("YOU WIN!");
+            }
         }
 
         /*PLACEHOLDER LOGIC FOR ORANGE BLOCK*/
