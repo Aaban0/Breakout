@@ -1330,8 +1330,8 @@ GameObject:
   - component: {fileID: 373080532}
   - component: {fileID: 373080531}
   m_Layer: 0
-  m_Name: Brick(Clone) (8)
-  m_TagString: Brick
+  m_Name: Black Brick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,7 +1419,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.49019608, g: 0.46382916, b: 0.89499784, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3989,8 +3989,8 @@ GameObject:
   - component: {fileID: 1193068594}
   - component: {fileID: 1193068593}
   m_Layer: 0
-  m_Name: Brick(Clone) (23)
-  m_TagString: Brick
+  m_Name: Black Brick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4078,7 +4078,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.49019608, g: 0.46382916, b: 0.89499784, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4671,6 +4671,7 @@ MonoBehaviour:
   health: {fileID: 1203403616}
   enemyHealth: {fileID: 139392977}
   healthBoostPrefab: {fileID: 137424025961256189, guid: c5d2b024732922c44935769b407cb659, type: 3}
+  multiBallPrefab: {fileID: 6237259685202303367, guid: ab7487189bcebd6409aba92ae8e3c5d1, type: 3}
   gameOver: {fileID: 1232914227}
   youWin: {fileID: 1356471445}
   healthbar: {fileID: 840517499}

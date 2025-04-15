@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Ball : MonoBehaviour
     public EnemyHealth enemyHealth;
 
     public GameObject healthBoostPrefab;
+    public GameObject multiBallPrefab;
     public GameObject gameOver;
 
     public GameObject youWin;
@@ -34,7 +36,6 @@ public class Ball : MonoBehaviour
 
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
-
     }
 
     void Update()
@@ -60,8 +61,17 @@ public class Ball : MonoBehaviour
             Destroy(collision.gameObject);
             score += 150;
             scoreTxt.text = score.ToString("000000");
-            //enemy gets damaged 
-            enemyHealth.Damage(3.34f);
+
+            if (SceneManager.GetActiveScene().name == "Level_1")
+            {
+                //enemy gets damaged 
+                enemyHealth.Damage(3.34f);
+            }
+            else if (SceneManager.GetActiveScene().name == "Level_2")
+            {
+                enemyHealth.Damage(3.6f);
+            }
+
             //if enemy health is 0 then player wins round
             if (enemyHealth.healthCurrent <= 0)
             {
@@ -74,6 +84,16 @@ public class Ball : MonoBehaviour
             {
                 //spawns at the destroyed bricks x & y coordinate
                 Instantiate(healthBoostPrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+
+            if (SceneManager.GetActiveScene().name == "Level_2")
+            {
+                int randomInt2 = Random.Range(1, 5);
+                if (randomInt2 == 1)
+                {
+                    //spawns at the destroyed bricks x & y coordinate
+                    Instantiate(multiBallPrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
+                }
             }
         }
     }
