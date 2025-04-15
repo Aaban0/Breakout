@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &59154931
 Transform:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 195524174}
   m_Layer: 0
   m_Name: Brick(Clone) (7)
-  m_TagString: Brick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,8 +911,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195524172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5491765, y: 1.7817066, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalPosition: {x: -0.93, y: 1.7817066, z: 0.05370636}
+  m_LocalScale: {x: 5.12, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -986,7 +986,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.728497, g: 1, b: 0.64071465, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1083,6 +1083,7 @@ GameObject:
   - component: {fileID: 224680259}
   - component: {fileID: 224680261}
   - component: {fileID: 224680260}
+  - component: {fileID: 224680262}
   m_Layer: 0
   m_Name: Brick(Clone) (4)
   m_TagString: Brick
@@ -1099,7 +1100,7 @@ Transform:
   m_GameObject: {fileID: 224680258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1991765, y: 3.1817064, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -1183,6 +1184,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &224680262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224680258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &242767729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &242767730
 Transform:
   m_ObjectHideFlags: 0
@@ -2137,6 +2151,7 @@ GameObject:
   - component: {fileID: 586973678}
   - component: {fileID: 586973680}
   - component: {fileID: 586973679}
+  - component: {fileID: 586973681}
   m_Layer: 0
   m_Name: Brick(Clone) (26)
   m_TagString: Brick
@@ -2153,7 +2168,7 @@ Transform:
   m_GameObject: {fileID: 586973677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.0508237, y: 1.0817065, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -2237,6 +2252,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &586973681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586973677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &675287896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,6 +2276,7 @@ GameObject:
   - component: {fileID: 675287897}
   - component: {fileID: 675287899}
   - component: {fileID: 675287898}
+  - component: {fileID: 675287900}
   m_Layer: 0
   m_Name: Brick(Clone) (27)
   m_TagString: Brick
@@ -2264,7 +2293,7 @@ Transform:
   m_GameObject: {fileID: 675287896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.0508237, y: 1.7817066, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -2348,6 +2377,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &675287900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675287896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &687126620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,7 +2598,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.039215684, g: 0.050179277, b: 0.2, a: 0}
+  m_BackGroundColor: {r: 0.15583839, g: 0.16553935, b: 0.3207547, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3211,6 +3253,7 @@ GameObject:
   - component: {fileID: 971385529}
   - component: {fileID: 971385531}
   - component: {fileID: 971385530}
+  - component: {fileID: 971385532}
   m_Layer: 0
   m_Name: Brick(Clone) (2)
   m_TagString: Brick
@@ -3227,7 +3270,7 @@ Transform:
   m_GameObject: {fileID: 971385528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1991765, y: 1.7817066, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -3311,6 +3354,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &971385532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971385528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &980004389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,6 +3489,7 @@ GameObject:
   - component: {fileID: 990943062}
   - component: {fileID: 990943064}
   - component: {fileID: 990943063}
+  - component: {fileID: 990943065}
   m_Layer: 0
   m_Name: Brick(Clone) (28)
   m_TagString: Brick
@@ -3449,7 +3506,7 @@ Transform:
   m_GameObject: {fileID: 990943061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.0508237, y: 2.4817064, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -3533,6 +3590,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &990943065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990943061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1027689396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,6 +3614,7 @@ GameObject:
   - component: {fileID: 1027689397}
   - component: {fileID: 1027689399}
   - component: {fileID: 1027689398}
+  - component: {fileID: 1027689400}
   m_Layer: 0
   m_Name: Brick(Clone) (3)
   m_TagString: Brick
@@ -3560,7 +3631,7 @@ Transform:
   m_GameObject: {fileID: 1027689396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1991765, y: 2.4817064, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -3644,6 +3715,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1027689400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027689396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1042345684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,6 +3961,7 @@ GameObject:
   - component: {fileID: 1090131847}
   - component: {fileID: 1090131849}
   - component: {fileID: 1090131848}
+  - component: {fileID: 1090131850}
   m_Layer: 0
   m_Name: Brick(Clone) (1)
   m_TagString: Brick
@@ -3893,7 +3978,7 @@ Transform:
   m_GameObject: {fileID: 1090131846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1991765, y: 1.0817065, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -3977,6 +4062,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1090131850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090131846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1179147633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,6 +4589,7 @@ GameObject:
   - component: {fileID: 1227260349}
   - component: {fileID: 1227260351}
   - component: {fileID: 1227260350}
+  - component: {fileID: 1227260352}
   m_Layer: 0
   m_Name: Brick(Clone) (29)
   m_TagString: Brick
@@ -4507,7 +4606,7 @@ Transform:
   m_GameObject: {fileID: 1227260348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.0508237, y: 3.1817064, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -4591,6 +4690,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1227260352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227260348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1232914227
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,7 +4987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1327834794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5352,6 +5464,7 @@ GameObject:
   - component: {fileID: 1605033840}
   - component: {fileID: 1605033842}
   - component: {fileID: 1605033841}
+  - component: {fileID: 1605033843}
   m_Layer: 0
   m_Name: Brick(Clone) (25)
   m_TagString: Brick
@@ -5368,7 +5481,7 @@ Transform:
   m_GameObject: {fileID: 1605033839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.0508237, y: 0.38170642, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -5452,6 +5565,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1605033843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605033839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1623151088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6261,6 +6387,7 @@ GameObject:
   - component: {fileID: 1878780051}
   - component: {fileID: 1878780053}
   - component: {fileID: 1878780052}
+  - component: {fileID: 1878780054}
   m_Layer: 0
   m_Name: Brick(Clone)
   m_TagString: Brick
@@ -6277,7 +6404,7 @@ Transform:
   m_GameObject: {fileID: 1878780050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1991765, y: 0.38170642, z: 0.05370636}
-  m_LocalScale: {x: 1.5, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 708838617}
@@ -6361,6 +6488,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1878780054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878780050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3046b12bbdb3408d8c360c77267b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1902652947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,7 +6518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1902652948
 Transform:
   m_ObjectHideFlags: 0
