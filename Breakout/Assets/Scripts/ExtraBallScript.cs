@@ -38,6 +38,7 @@ public class ExtraBallScript : MonoBehaviour
             /*score += 150;
             scoreTxt.text = score.ToString("000000");*/
             //enemy gets damaged
+            enemyHealth.Damage(3.57f);
         }
     }
 }

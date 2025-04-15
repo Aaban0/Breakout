@@ -34,7 +34,9 @@ public class MultiBall : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Destroy(gameObject);
-            Instantiate(multiBallPrefab, new Vector3(player.transform.position.x, player.transform.position.y + 2, 0), Quaternion.identity);
+            Instantiate(multiBallPrefab, new Vector3(player.transform.position.x, player.transform.position.y, 0), Quaternion.identity);
+            Instantiate(multiBallPrefab, new Vector3(player.transform.position.x - 0.5f, player.transform.position.y, 0), Quaternion.identity);
+            Instantiate(multiBallPrefab, new Vector3(player.transform.position.x + 0.5f, player.transform.position.y, 0), Quaternion.identity);
             Debug.Log("SPAWNING BALLS!");
         }
     }
