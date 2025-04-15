@@ -17,7 +17,8 @@ public class Ball : MonoBehaviour
 
     private int counter = 0; 
 
-    public StrongBrick strongBrick;
+
+    public PlayerHealth health;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class Ball : MonoBehaviour
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
 
-        strongBrick = FindObjectOfType<StrongBrick>();
+        //strongBrick = FindObjectOfType<StrongBrick>();
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class Ball : MonoBehaviour
         }
 
         DeathCondition();
-        StrongBrick();
+        //StrongBrick();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -78,19 +79,24 @@ public class Ball : MonoBehaviour
             transform.position = startPosition;
             //resets the velocity to its inital velocity
             rb.velocity = Vector2.down * 8f;
+            health.Damage(10);
+            Debug.Log("HIT!");
 
-            Debug.Log("GAME OVER!");
+            if (health.healthCurrent <= 0)
+            {
+                Debug.Log("GAME OVER!");
+            }
         }
     }
 
-    private void StrongBrick()
+    /*private void StrongBrick()
     {
         if (strongBrick.IsDestroyed() == true)
         {
             score += 250;
             scoreTxt.text = score.ToString("000000");
         }
-    }
+    }*/
 
     /*public void AddScore(int amount)
     {
