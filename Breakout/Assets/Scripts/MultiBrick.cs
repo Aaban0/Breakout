@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class MultiBrick : MonoBehaviour
 {
-    private bool powerEnabled = false;
+    public bool powerEnabled = false;
     public CircleCollider2D circleCollider;
 
     private SpriteRenderer spriteRenderer;
+    public EnemyHealth enemyHealth;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyHealth = FindObjectOfType<EnemyHealth>();
 
-        powerEnabled = true;
-        spriteRenderer.color = Color.yellow;
+        //powerEnabled = true;
+        //spriteRenderer.color = Color.yellow;
     }
 
     private void Update()
@@ -22,6 +24,7 @@ public class MultiBrick : MonoBehaviour
         if (powerEnabled)
         {
             circleCollider.enabled = true;
+            spriteRenderer.color = Color.yellow;
             StartCoroutine(WaitTime());
         }
         else if (!powerEnabled)
@@ -36,6 +39,7 @@ public class MultiBrick : MonoBehaviour
         {
             if (collision.gameObject.tag.Equals("Brick"))
             {
+                enemyHealth.Damage(3.847f);
                 Destroy(collision.gameObject);
             }
         }

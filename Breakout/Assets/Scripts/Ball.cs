@@ -22,6 +22,8 @@ public class Ball : MonoBehaviour
 
     public GameObject healthBoostPrefab;
     public GameObject multiBallPrefab;
+
+    public GameObject brickPhasePrefab;
     public GameObject gameOver;
 
     public GameObject youWin;
@@ -97,6 +99,16 @@ public class Ball : MonoBehaviour
                 {
                     //spawns at the destroyed bricks x & y coordinate
                     Instantiate(multiBallPrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
+                }
+            }
+
+            if (SceneManager.GetActiveScene().name == "Level_3")
+            {
+                int randomInt3 = Random.Range(1, 7);
+                if (randomInt3 == 1)
+                {
+                    //spawns at the destroyed bricks x & y coordinate
+                    Instantiate(brickPhasePrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
                 }
             }
         }
