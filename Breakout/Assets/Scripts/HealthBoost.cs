@@ -12,6 +12,7 @@ public class HealthBoost : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets rigidbody, playerHealth script and sets the velocity
         rb = GetComponent<Rigidbody2D>();
         playerHealth = FindObjectOfType<PlayerHealth>();
 
@@ -20,6 +21,7 @@ public class HealthBoost : MonoBehaviour
 
     private void Update()
     {
+        //if the object is below the screen it gets deleted 
         if (transform.position.y <= screeBottom)
         {
             Destroy(gameObject);
@@ -28,8 +30,10 @@ public class HealthBoost : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //if the object collides with the player 
         if (collision.gameObject.tag.Equals("Player"))
         {
+            //object is destroyed and player gains health
             Destroy(gameObject);
             playerHealth.Heal(30);
             Debug.Log("HEAL!");

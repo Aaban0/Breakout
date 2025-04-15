@@ -48,22 +48,26 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //if ball collides with a brick
         if (collision.gameObject.tag.Equals("Brick"))
         {
+            //brick gets destroyed and score is increased
             Destroy(collision.gameObject);
             score += 150;
             scoreTxt.text = score.ToString("000000");
-
+            //enemy gets damaged 
             enemyHealth.Damage(3.34f);
-
+            //if enemy health is 0 then player wins round
             if (enemyHealth.healthCurrent <= 0)
             {
                 Debug.Log("YOU WIN!");
             }
 
+            //1 in 5 chance for the health boost to spawn
             int randomInt = Random.Range(1, 5);
             if (randomInt == 1)
             {
+                //spawns at the destroyed bricks x & y coordinate
                 Instantiate(healthBoostPrefab, new Vector3(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y, 0), Quaternion.identity);
             }
         }
@@ -78,6 +82,8 @@ public class Ball : MonoBehaviour
             transform.position = startPosition;
             //resets the velocity to its inital velocity
             rb.velocity = Vector2.down * 8f;
+
+            //player is damaged
             health.Damage(30);
             Debug.Log("HIT!");
 

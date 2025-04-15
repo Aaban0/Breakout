@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StrongBrick : MonoBehaviour
 {
+    /*SCRIPT NOT IN USE!*/
+
     private int counter = 0;
 
     private bool destroyed = false;
