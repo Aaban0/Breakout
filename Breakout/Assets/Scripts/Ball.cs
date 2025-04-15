@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.tag.Equals("Brick"))
         {
             Destroy(collision.gameObject);
-            score += 100;
+            score += 150;
             scoreTxt.text = score.ToString("000000");
 
             enemyHealth.Damage(3.34f);
