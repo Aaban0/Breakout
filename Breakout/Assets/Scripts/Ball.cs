@@ -79,7 +79,7 @@ public class Ball : MonoBehaviour
             transform.position = startPosition;
             //resets the velocity to its inital velocity
             rb.velocity = Vector2.down * 8f;
-            health.Damage(10);
+            health.Damage(30);
             Debug.Log("HIT!");
 
             if (health.healthCurrent <= 0)
