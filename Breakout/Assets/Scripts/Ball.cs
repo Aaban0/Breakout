@@ -77,6 +77,10 @@ public class Ball : MonoBehaviour
             {
                 enemyHealth.Damage(3.847f);
             }
+            else if (SceneManager.GetActiveScene().name == "Boss")
+            {
+                enemyHealth.Damage(3.34f);
+            }
 
             //if enemy health is 0 then player wins round
             if (enemyHealth.healthCurrent <= 0)
