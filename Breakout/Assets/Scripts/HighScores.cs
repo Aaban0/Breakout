@@ -33,7 +33,10 @@ public class HighScores : MonoBehaviour
 
     private void Update()
     {
-        ResetHighScores();
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ResetHighScores();
+        }
     }
 
     private void UpdateHighScores()
@@ -139,16 +142,16 @@ public class HighScores : MonoBehaviour
 
     private void ResetHighScores()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        //loops for all scores
+        /*for (int i = 0; i < 5; i++)
         {
-            //loops for all scores
-            for (int i = 0; i < 5; i++)
-            {
-                //resets to its default values
-                PlayerPrefs.SetInt("HighScore" + i, 0);
-                PlayerPrefs.SetString("name", "---");
-            }
-            PlayerPrefs.Save();
-        }
+            //resets to its default values
+            PlayerPrefs.SetInt("HighScore" + i, 0);
+            PlayerPrefs.SetString("name" + i, "---");
+        }*/
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        PrintHighScores();
     }
 }
