@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3108935751026070539}
   - component: {fileID: 3617658102402465114}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7023541509783071129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 0}
   powerBar: {fileID: 5463147261958402667}
+  e: {fileID: 3617658102402465114}
   powerCurrent: 100
   powerMax: 100
 --- !u!1 &7565704386811922497
