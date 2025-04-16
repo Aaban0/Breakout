@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class YouWin : MonoBehaviour
 {
     public GameObject youWin;
+    public Ball ball;
 
     // Update is called once per frame
     void Update()
@@ -21,6 +22,7 @@ public class YouWin : MonoBehaviour
         Time.timeScale = 1f;
         gameObject.SetActive(false);
 
+        PlayerPrefs.SetInt("score", ball.score);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

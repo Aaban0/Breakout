@@ -1,28 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HighScores : MonoBehaviour
 {
-    public Ball ball;
+    private int highScore1;
+    public TextMeshProUGUI score1;
+    /*public TextMeshProUGUI score2;
+    public TextMeshProUGUI score3;
+    public TextMeshProUGUI score4;
+    public TextMeshProUGUI score5;*/
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CheckHighScore();
     }
 
     private void CheckHighScore()
     {
-        if (ball.score > PlayerPrefs.GetInt("HighScore", 0))
+        if (PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("HighScore", 0))
         {
-            PlayerPrefs.SetInt("HighScore", 0);
+            PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("score"));
+
+            //highScore1 = PlayerPrefs.GetInt("HighScore");
+            score1.text = $" Score: {PlayerPrefs.GetInt("HighScore"/*, highScore1*/)}";
+        }
+        else
+        {
+            score1.text = $" Score: {PlayerPrefs.GetInt("HighScore")}";
         }
     }
 }

@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWin: {fileID: 182938899}
+  ball: {fileID: 948743743}
 --- !u!1 &185763698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,10 +1651,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityLimit: 15
+  score: 0
   scoreTxt: {fileID: 932869266}
   health: {fileID: 1257784463}
   enemyHealth: {fileID: 1037075495}
   healthBoostPrefab: {fileID: 137424025961256189, guid: c5d2b024732922c44935769b407cb659, type: 3}
+  multiBallPrefab: {fileID: 0}
+  brickPhasePrefab: {fileID: 0}
   gameOver: {fileID: 1323984481}
   youWin: {fileID: 182938899}
   healthbar: {fileID: 450365957}

@@ -39,11 +39,6 @@ public class Ball : MonoBehaviour
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
 
-        if (SceneManager.GetActiveScene().name == "Level_1")
-        {
-            score = 0;
-        }
-
         UpdateScore();
     }
 
@@ -58,6 +53,11 @@ public class Ball : MonoBehaviour
 
         //if enemy health is 0 then player wins round
         if (enemyHealth.healthCurrent <= 0)
+        {
+            youWin.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             youWin.SetActive(true);
         }
@@ -77,7 +77,7 @@ public class Ball : MonoBehaviour
             //score += 150;
 
             PlayerPrefs.SetInt("score", score += 150);
-            scoreTxt.text = $"{PlayerPrefs.GetInt("score", 0)}";
+            scoreTxt.text = $"{PlayerPrefs.GetInt("score", score)}";
             //scoreTxt.text = score.ToString("000000");
 
             if (SceneManager.GetActiveScene().name == "Level_1")
@@ -156,12 +156,8 @@ public class Ball : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreTxt.text = $"{PlayerPrefs.GetInt("score", 0)}";
-    }
-
-    public void LoadScore()
-    {
-        PlayerPrefs.GetInt("score", score);
+        scoreTxt.text = $"{PlayerPrefs.GetInt("score", score)}";
+        score = PlayerPrefs.GetInt("score", score);
     }
 
     /*private void StrongBrick()

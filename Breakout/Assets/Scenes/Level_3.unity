@@ -5003,6 +5003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityLimit: 15
+  score: 0
   scoreTxt: {fileID: 1697749250}
   health: {fileID: 1203403616}
   enemyHealth: {fileID: 139392977}
@@ -5200,6 +5201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWin: {fileID: 1356471445}
+  ball: {fileID: 1327834794}
 --- !u!1 &1424080437
 GameObject:
   m_ObjectHideFlags: 0
