@@ -20,6 +20,14 @@ public class EnemyHealth : MonoBehaviour
         healthBar.fillAmount = healthCurrent / healthMax;
     }
 
+    public void Heal(float heal)
+    {
+        //heals the players health (works the same as damage)
+        healthCurrent += heal;
+        //changes the fill of the healthbar to the value of health / 100 to get a percentace value 
+        healthBar.fillAmount = healthCurrent / healthMax;
+    }
+
     private void Update()
     {
         if (healthCurrent <= 0)
