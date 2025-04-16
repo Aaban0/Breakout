@@ -12,6 +12,12 @@ public class HighScores : MonoBehaviour
     public TextMeshProUGUI HighScore4;
     public TextMeshProUGUI HighScore5;
 
+    public TextMeshProUGUI Name1;
+    public TextMeshProUGUI Name2;
+    public TextMeshProUGUI Name3;
+    public TextMeshProUGUI Name4;
+    public TextMeshProUGUI Name5;
+
     int playerScore;
 
 
@@ -22,16 +28,18 @@ public class HighScores : MonoBehaviour
 
         UpdateHighScores();
         PrintHighScores();
+
     }
 
     private void Update()
     {
-
+        ResetHighScores();
     }
 
     private void UpdateHighScores()
     {
         int newScore = PlayerPrefs.GetInt("score");
+        string playerName = PlayerPrefs.GetString("name");
 
         for (int i = 0; i < 5; i++)
         {
@@ -44,15 +52,45 @@ public class HighScores : MonoBehaviour
                 {
                     int previous = PlayerPrefs.GetInt("HighScore" + (j - 1), 0);
                     PlayerPrefs.SetInt("HighScore" + j, previous);
+
+                    PlayerPrefs.SetString("HighScoreName" + j, PlayerPrefs.GetString("HighScoreName" + (j - 1), "---"));
+
                 }
 
                 // Insert new score
                 PlayerPrefs.SetInt("HighScore" + i, newScore);
+
+                PlayerPrefs.SetString("HighScoreName" + i, playerName);
+
                 PlayerPrefs.Save();
                 break;
             }
         }
     }
+
+    /*public void SaveName(string playerName, int newScore)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            int savedScore = PlayerPrefs.GetInt("HighScore" + i, 0);
+
+            if (newScore > savedScore)
+            {
+                // Shift down lower scores & names
+                for (int j = 4; j > i; j--)
+                {
+                    PlayerPrefs.SetInt("HighScore" + j, PlayerPrefs.GetInt("HighScore" + (j - 1), 0));
+                    PlayerPrefs.SetString("HighScoreName" + j, PlayerPrefs.GetString("HighScoreName" + (j - 1), "---"));
+                }
+
+                // Insert new score and name
+                PlayerPrefs.SetInt("HighScore" + i, newScore);
+                PlayerPrefs.SetString("HighScoreName" + i, playerName);
+                PlayerPrefs.Save();
+                break;
+            }
+        }
+    }*/
 
     void PrintHighScores()
     {
@@ -80,7 +118,42 @@ public class HighScores : MonoBehaviour
                 HighScore5.text = "Score 5: " + score;
             }
 
+            string name = PlayerPrefs.GetString("HighScoreName" + i, "---");
+            if (i == 0)
+            {
+                Name1.text = "Name: " + name;
+            }
+            if (i == 1)
+            {
+                Name2.text = "Name: " + name;
+            }
+            if (i == 2)
+            {
+                Name3.text = "Name: " + name;
+            }
+            if (i == 3)
+            {
+                Name4.text = "Name: " + name;
+            }
+            if (i == 4)
+            {
+                Name5.text = "Name: " + name;
+            }
+
             //Debug.Log("Rank " + (i + 1) + ": " + score);
+        }
+    }
+
+    private void ResetHighScores()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                PlayerPrefs.SetInt("HighScore" + i, 0);
+                PlayerPrefs.SetString("name", "---");
+            }
+            PlayerPrefs.Save();
         }
     }
 
