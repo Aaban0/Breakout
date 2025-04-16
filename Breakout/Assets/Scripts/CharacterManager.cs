@@ -7,7 +7,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject character1Prefab;
     public GameObject character2Prefab;
 
-    void Update()
+    void Start()
     {
         if (PlayerPrefs.GetInt("character") == 0)
         {
