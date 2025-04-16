@@ -39,7 +39,7 @@ public class MultiBrick : MonoBehaviour
         {
             if (collision.gameObject.tag.Equals("Brick"))
             {
-                enemyHealth.Damage(3.847f);
+                enemyHealth.Damage(3.8465f);
                 Destroy(collision.gameObject);
             }
         }
