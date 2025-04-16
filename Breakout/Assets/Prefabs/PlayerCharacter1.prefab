@@ -309,6 +309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc759ff809896fe49b065ce2f54a7882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  powerBar: {fileID: 5463147261958402667}
+  powerCurrent: 100
+  powerMax: 100
 --- !u!1 &7565704386811922497
 GameObject:
   m_ObjectHideFlags: 0
