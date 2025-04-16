@@ -22,13 +22,14 @@ public class EnemyBrickSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        brickCurrent += Time.deltaTime * 10;
+        brickCurrent += Time.deltaTime * 20;
 
         brickBar.fillAmount = brickCurrent / brickMax;
 
         if (brickCurrent >= brickMax)
         {
-            Instantiate(brickPrefab);
+            var position = new Vector3(Random.Range(-4.11f, 3), Random.Range(-1.82f, -0.25f), 0);
+            Instantiate(brickPrefab, position, Quaternion.identity);
             enemyHealth.Heal(3.34f);
             brickCurrent = 0;
         }
