@@ -38,11 +38,14 @@ public class HighScores : MonoBehaviour
 
     private void UpdateHighScores()
     {
+        //gets player score and name
         int newScore = PlayerPrefs.GetInt("score");
         string playerName = PlayerPrefs.GetString("name");
 
+        //loops for 5 scores 
         for (int i = 0; i < 5; i++)
         {
+            //gets score at i
             int savedScore = PlayerPrefs.GetInt("HighScore" + i, 0);
 
             if (newScore > savedScore)
@@ -50,97 +53,87 @@ public class HighScores : MonoBehaviour
                 // Shift down the lower scores
                 for (int j = 4; j > i; j--)
                 {
-                    int previous = PlayerPrefs.GetInt("HighScore" + (j - 1), 0);
-                    PlayerPrefs.SetInt("HighScore" + j, previous);
+                    //moves items down by one 
 
+                    //get score one place up
+                    int previous = PlayerPrefs.GetInt("HighScore" + (j - 1), 0);
+                    //move down by one 
+                    PlayerPrefs.SetInt("HighScore" + j, previous);
+                    //move name down by one 
                     PlayerPrefs.SetString("HighScoreName" + j, PlayerPrefs.GetString("HighScoreName" + (j - 1), "---"));
 
                 }
-
-                // Insert new score
+                // Adds new score
                 PlayerPrefs.SetInt("HighScore" + i, newScore);
-
                 PlayerPrefs.SetString("HighScoreName" + i, playerName);
 
                 PlayerPrefs.Save();
+
+                //exit since score is added
                 break;
             }
         }
     }
 
-    /*public void SaveName(string playerName, int newScore)
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            int savedScore = PlayerPrefs.GetInt("HighScore" + i, 0);
-
-            if (newScore > savedScore)
-            {
-                // Shift down lower scores & names
-                for (int j = 4; j > i; j--)
-                {
-                    PlayerPrefs.SetInt("HighScore" + j, PlayerPrefs.GetInt("HighScore" + (j - 1), 0));
-                    PlayerPrefs.SetString("HighScoreName" + j, PlayerPrefs.GetString("HighScoreName" + (j - 1), "---"));
-                }
-
-                // Insert new score and name
-                PlayerPrefs.SetInt("HighScore" + i, newScore);
-                PlayerPrefs.SetString("HighScoreName" + i, playerName);
-                PlayerPrefs.Save();
-                break;
-            }
-        }
-    }*/
-
     void PrintHighScores()
     {
+        //loops for 5 scores 
         for (int i = 0; i < 5; i++)
         {
+            //gets the high score
             int score = PlayerPrefs.GetInt("HighScore" + i, 0);
             if (i == 0)
             {
-                HighScore.text = "Score 1: " + score; // Displays the score for the first rank (index 0)
+                // Displays the score for the first rank
+                HighScore.text = "Score 1: " + score;
             }
             if (i == 1)
             {
+                // Displays the score for the Second rank
                 HighScore2.text = "Score 2: " + score;
             }
             if (i == 2)
             {
+                // Displays the score for the third rank
                 HighScore3.text = "Score 3: " + score;
             }
             if (i == 3)
             {
+                // Displays the score for the fourth rank
                 HighScore4.text = "Score 4: " + score;
             }
             if (i == 4)
             {
+                // Displays the score for the fith rank
                 HighScore5.text = "Score 5: " + score;
             }
-
+            //gets the names 
             string name = PlayerPrefs.GetString("HighScoreName" + i, "---");
             if (i == 0)
             {
+                // Displays the name for the first rank
                 Name1.text = "Name: " + name;
             }
             if (i == 1)
             {
+                // Displays the name for the second rank
                 Name2.text = "Name: " + name;
             }
             if (i == 2)
             {
+                // Displays the name for the third rank
                 Name3.text = "Name: " + name;
             }
             if (i == 3)
             {
+                // Displays the name for the fourth rank
                 Name4.text = "Name: " + name;
             }
             if (i == 4)
             {
+                // Displays the name for the fith rank
                 Name5.text = "Name: " + name;
             }
-
-            //Debug.Log("Rank " + (i + 1) + ": " + score);
         }
     }
 
@@ -148,37 +141,14 @@ public class HighScores : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
+            //loops for all scores
             for (int i = 0; i < 5; i++)
             {
+                //resets to its default values
                 PlayerPrefs.SetInt("HighScore" + i, 0);
                 PlayerPrefs.SetString("name", "---");
             }
             PlayerPrefs.Save();
         }
     }
-
-
-    /*private void CheckHighScore()
-    {
-        if (PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("HighScore", 0))
-        {
-            PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("score"));
-            score1.text = $" Score 1: {PlayerPrefs.GetInt("HighScore")}";
-        }
-        else
-        {
-            score1.text = $" Score 1: {PlayerPrefs.GetInt("HighScore")}";
-        }
-
-
-        if (PlayerPrefs.GetInt("score") < PlayerPrefs.GetInt("HighScore", 0))
-        {
-            PlayerPrefs.SetInt("HighScore2", PlayerPrefs.GetInt("score"));
-            score2.text = $" Score 2: {PlayerPrefs.GetInt("HighScore2")}";
-        }
-        else
-        {
-            score2.text = $" Score 2: {PlayerPrefs.GetInt("HighScore")}";
-        }
-    }*/
 }
