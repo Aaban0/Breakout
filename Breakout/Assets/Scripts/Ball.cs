@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public int score = 0;
+    public int score;
     public TextMeshProUGUI scoreTxt;
 
     public PlayerHealth health;
@@ -39,6 +39,11 @@ public class Ball : MonoBehaviour
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
 
+        if (SceneManager.GetActiveScene().name == "Level_1")
+        {
+            score = 0;
+        }
+
         UpdateScore();
     }
 
@@ -49,6 +54,12 @@ public class Ball : MonoBehaviour
         {
             //restricts (clamps) velocity 
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, velocityLimit);
+        }
+
+        //if enemy health is 0 then player wins round
+        if (enemyHealth.healthCurrent <= 0)
+        {
+            youWin.SetActive(true);
         }
 
         DeathCondition();
@@ -85,12 +96,6 @@ public class Ball : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "Boss")
             {
                 enemyHealth.Damage(3.34f);
-            }
-
-            //if enemy health is 0 then player wins round
-            if (enemyHealth.healthCurrent <= 0)
-            {
-                youWin.SetActive(true);
             }
 
             //1 in 5 chance for the health boost to spawn
