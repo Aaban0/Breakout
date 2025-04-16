@@ -24,7 +24,7 @@ public class Character1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        powerCurrent += Time.deltaTime * 5f;
+        powerCurrent += Time.deltaTime * 6f;
 
         powerBar.fillAmount = powerCurrent / powerMax;
 
