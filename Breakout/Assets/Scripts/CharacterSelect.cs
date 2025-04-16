@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CharacterSelect : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        PlayerPrefs.DeleteKey("character");
+    }
+
+    public void Character1()
+    {
+        PlayerPrefs.SetInt("character", 0);
+        SceneManager.LoadScene("Level_1");
+    }
+
+    public void Character2()
+    {
+        PlayerPrefs.SetInt("character", PlayerPrefs.GetInt("character", + 1));
+        SceneManager.LoadScene("Level_1");
+    }
+}

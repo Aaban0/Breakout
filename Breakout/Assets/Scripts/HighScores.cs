@@ -18,6 +18,11 @@ public class HighScores : MonoBehaviour
     public TextMeshProUGUI score4;
     public TextMeshProUGUI score5;
 
+    private void Start()
+    {
+        PlayerPrefs.DeleteKey("character");
+    }
+
     private void Update()
     {
         CheckHighScore();
@@ -44,7 +49,7 @@ public class HighScores : MonoBehaviour
         }
         else
         {
-            score1.text = $" Score 2: {PlayerPrefs.GetInt("HighScore")}";
+            score2.text = $" Score 2: {PlayerPrefs.GetInt("HighScore")}";
         }
     }
 }

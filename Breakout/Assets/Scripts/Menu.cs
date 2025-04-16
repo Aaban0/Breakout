@@ -16,13 +16,16 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level_1");
+        PlayerPrefs.DeleteKey("character");
+        SceneManager.LoadScene("CharacterSelect");
+        //SceneManager.LoadScene("Level_1");
         PlayerPrefs.SetInt("score", 0);
     }
 
     public void Quit()
     {
         PlayerPrefs.Save();
+        PlayerPrefs.DeleteKey("character");
         //exits the game
         Application.Quit();
     }
