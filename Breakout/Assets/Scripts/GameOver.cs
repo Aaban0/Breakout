@@ -22,12 +22,13 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1f;
         gameObject.SetActive(false);
-
+        PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         
     }
     public void MainMenu()
     {
         SceneManager.LoadScene("Main_Menu");
+        PlayerPrefs.SetInt("score", 0);
     }
 }

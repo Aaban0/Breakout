@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    int score { get; set; } = 0;
+    public int score = 0;
     public TextMeshProUGUI scoreTxt;
 
     public PlayerHealth health;
@@ -38,6 +38,8 @@ public class Ball : MonoBehaviour
 
         //sets the velocity of the ball 
         rb.velocity = Vector2.down * 8f;
+
+        UpdateScore();
     }
 
     void Update()
@@ -51,7 +53,6 @@ public class Ball : MonoBehaviour
 
         DeathCondition();
         //StrongBrick();
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,8 +62,12 @@ public class Ball : MonoBehaviour
         {
             //brick gets destroyed and score is increased
             Destroy(collision.gameObject);
-            score += 150;
-            scoreTxt.text = score.ToString("000000");
+            //PlayerPrefs.SetInt("score", score += 150);
+            //score += 150;
+
+            PlayerPrefs.SetInt("score", score += 150);
+            scoreTxt.text = $"{PlayerPrefs.GetInt("score", 0)}";
+            //scoreTxt.text = score.ToString("000000");
 
             if (SceneManager.GetActiveScene().name == "Level_1")
             {
@@ -142,6 +147,16 @@ public class Ball : MonoBehaviour
 
 
         }
+    }
+
+    public void UpdateScore()
+    {
+        scoreTxt.text = $"{PlayerPrefs.GetInt("score", 0)}";
+    }
+
+    public void LoadScore()
+    {
+        PlayerPrefs.GetInt("score", score);
     }
 
     /*private void StrongBrick()
