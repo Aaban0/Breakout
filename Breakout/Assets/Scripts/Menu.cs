@@ -16,7 +16,7 @@ public class Menu : MonoBehaviour
         score = PlayerPrefs.GetInt("score");
         scoreText.text = $"YOU SCORED: {PlayerPrefs.GetInt("score", score)}";
 
-        message.enabled = false;
+        //message.enabled = false;
         
         
     }
@@ -39,13 +39,18 @@ public class Menu : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
+
         StartCoroutine(Message());
     }
     private IEnumerator Message()
     {
-        message.enabled = true;
-        yield return new WaitForSeconds(2);
-        message.enabled = false;
+        if (SceneManager.GetActiveScene().name == "Main_Menu")
+        {
+            message.enabled = true;
+            yield return new WaitForSeconds(2);
+            message.enabled = false;
+        }
+       
     }
 
     public void Quit()
