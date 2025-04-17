@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf80f0ee8aca2a41b4954bcf1e46518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 2141549671}
   playerHealthBar: {fileID: 840517499}
   attackBar: {fileID: 1305790712}
   gameOver: {fileID: 1232914227}
@@ -4455,7 +4455,7 @@ MonoBehaviour:
   velocityLimit: 15
   score: 0
   scoreTxt: {fileID: 1697749250}
-  health: {fileID: 0}
+  health: {fileID: 2141549671}
   enemyHealth: {fileID: 139392977}
   healthBoostPrefab: {fileID: 137424025961256189, guid: c5d2b024732922c44935769b407cb659, type: 3}
   multiBallPrefab: {fileID: 6237259685202303367, guid: ab7487189bcebd6409aba92ae8e3c5d1, type: 3}
@@ -7029,7 +7029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29ff5f4f792bef4ca9dfaf4033ab69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 840517499}
   healthCurrent: 100
   healthMax: 100
 --- !u!60 &2141549672
@@ -7117,7 +7117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
