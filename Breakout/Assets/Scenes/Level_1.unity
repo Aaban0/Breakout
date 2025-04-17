@@ -4140,6 +4140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GamePauseObject: {fileID: 705208510}
+  YouWin: {fileID: 182938899}
+  GameOver: {fileID: 1323984481}
 --- !u!1 &2140560995
 GameObject:
   m_ObjectHideFlags: 0
