@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HighScores : MonoBehaviour
 {
@@ -33,9 +34,9 @@ public class HighScores : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            ResetHighScores();
+            SceneManager.LoadScene("End_Screen");
         }
     }
 

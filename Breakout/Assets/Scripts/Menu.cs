@@ -8,9 +8,17 @@ public class Menu : MonoBehaviour
 {
     public TextMeshProUGUI message;
 
+    private int score;
+    public TextMeshProUGUI scoreText;
+
     private void Start()
     {
+        score = PlayerPrefs.GetInt("score");
+        scoreText.text = $"YOU SCORED: {PlayerPrefs.GetInt("score", score)}";
+
         message.enabled = false;
+        
+        
     }
 
     private void Update()
@@ -46,5 +54,10 @@ public class Menu : MonoBehaviour
         PlayerPrefs.DeleteKey("character");
         //exits the game
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 }
