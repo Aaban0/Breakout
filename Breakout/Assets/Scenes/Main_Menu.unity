@@ -551,19 +551,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
       propertyPath: m_LocalScale.x
-      value: 109.41
+      value: 32.93
       objectReference: {fileID: 0}
     - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
       propertyPath: m_LocalScale.y
-      value: 204.67
+      value: 34.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -814.62
+      value: -692.11
       objectReference: {fileID: 0}
     - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 173.2
+      value: 149.4
       objectReference: {fileID: 0}
     - target: {fileID: 8615368517609550172, guid: ee0acc39e28f8de4b943da329cc93785, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2084,7 +2088,7 @@ RectTransform:
   m_GameObject: {fileID: 1221141286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.4622087}
-  m_LocalScale: {x: 0.009139934, y: 0.0048859147, z: 1}
+  m_LocalScale: {x: 0.009139934, y: 0.00885914, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1298584397}
@@ -2092,8 +2096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.935197, y: -0.004825473}
-  m_SizeDelta: {x: 1284.6, y: 130.4711}
+  m_AnchoredPosition: {x: 11.5, y: -0.004825473}
+  m_SizeDelta: {x: 1522.8, y: 130.4711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221141288
 MonoBehaviour:
@@ -2142,8 +2146,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.4
-  m_fontSizeBase: 53.4
+  m_fontSize: 145.1
+  m_fontSizeBase: 145.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2348,19 +2352,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 109.41
+      value: 32.93
       objectReference: {fileID: 0}
     - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 204.67
+      value: 34.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.4
+      value: 284.09
       objectReference: {fileID: 0}
     - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 173.2
+      value: 149.4
       objectReference: {fileID: 0}
     - target: {fileID: 6608126517692461735, guid: 8a0f26be6e5d56445b2b6ec00ad436e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3001,7 +3009,7 @@ RectTransform:
   m_GameObject: {fileID: 1681655550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.4622087}
-  m_LocalScale: {x: 0.009139933, y: 0.0048859143, z: 1}
+  m_LocalScale: {x: 0.009139933, y: 0.00885914, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 182760484}
@@ -3009,8 +3017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.908234, y: 0.040130615}
-  m_SizeDelta: {x: 1284.6, y: 130.4711}
+  m_AnchoredPosition: {x: 10.95, y: 0.040130615}
+  m_SizeDelta: {x: 1284.6, y: 385.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681655552
 MonoBehaviour:
@@ -3059,8 +3067,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.4
-  m_fontSizeBase: 53.4
+  m_fontSize: 145.1
+  m_fontSizeBase: 145.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

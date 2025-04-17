@@ -11,11 +11,11 @@ public class CharacterManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("character") == 0)
         {
-            Instantiate(character1Prefab, new Vector3(-7, -0.00999999978f, 0), Quaternion.identity);
+            Instantiate(character1Prefab, new Vector3(-7, 0.58f, 0), Quaternion.identity);
         }
         else if (PlayerPrefs.GetInt("character") == 1)
         {
-            Instantiate(character2Prefab, new Vector3(-7, -0.00999999978f, 0), Quaternion.identity);
+            Instantiate(character2Prefab, new Vector3(-7, 0.58f, 0), Quaternion.identity);
         }
     }
 }
