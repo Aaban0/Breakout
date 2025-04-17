@@ -33,7 +33,7 @@ public class HighScores : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             ResetHighScores();
         }
