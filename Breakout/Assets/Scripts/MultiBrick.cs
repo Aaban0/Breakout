@@ -47,7 +47,7 @@ public class MultiBrick : MonoBehaviour
 
     private IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         powerEnabled = false;
         spriteRenderer.color = Color.white;
     }

@@ -38,7 +38,7 @@ public class BrickPhase : MonoBehaviour
 
     private IEnumerator PowerDuration()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.9f);
         brick.powerEnabled = false;
     }
 }
