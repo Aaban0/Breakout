@@ -33,6 +33,8 @@ public class Ball : MonoBehaviour
     public AudioSource brickSfx;
     public AudioSource deathSfx;
 
+    public GameObject player;
+
     void Start()
     {
         //gets starting position 
@@ -150,7 +152,7 @@ public class Ball : MonoBehaviour
         if (transform.position.y <= deathY)
         {
             //ball reset to stating position 
-            transform.position = startPosition;
+            transform.position = player.transform.position + new Vector3(0, 0.5f, 0);
             //resets the velocity to its inital velocity
             rb.velocity = Vector2.down * 8f;
             deathSfx.Play();
