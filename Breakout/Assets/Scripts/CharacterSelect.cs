@@ -16,12 +16,14 @@ public class CharacterSelect : MonoBehaviour
     public void Character1()
     {
         PlayerPrefs.SetInt("character", 0);
+        Time.timeScale = 1f;
         //SceneManager.LoadScene("Level_1");
     }
 
     public void Character2()
     {
         PlayerPrefs.SetInt("character", PlayerPrefs.GetInt("character", + 1));
+        Time.timeScale = 1f;
         //SceneManager.LoadScene("Level_1");
     }
 
