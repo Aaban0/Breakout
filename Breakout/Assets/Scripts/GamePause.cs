@@ -29,5 +29,6 @@ public class GamePause : MonoBehaviour
         GamePauseObject.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main_Menu");
+        Time.timeScale = 1f;
     }
 }
