@@ -14,6 +14,8 @@ public class Character2 : MonoBehaviour
     public float powerCurrent = 0;
     public float powerMax = 100;
 
+    public AudioSource sfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class Character2 : MonoBehaviour
 
         if (powerCurrent >= powerMax && Input.GetKeyDown(KeyCode.E))
         {
+            sfx.Play();
             health.Heal(30);
             powerCurrent = 0;
         }
