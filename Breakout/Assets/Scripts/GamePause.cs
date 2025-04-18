@@ -8,13 +8,14 @@ public class GamePause : MonoBehaviour
     public GameObject GamePauseObject;
     public GameObject YouWin;
     public GameObject GameOver;
+    public GameObject Round;
 
     public AudioSource pauseSfx;
     public AudioSource clickSfx;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameOver.activeSelf == false && YouWin.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && GameOver.activeSelf == false && YouWin.activeSelf == false && Round.activeSelf == false)
         {
             pauseSfx.Play();
             GamePauseObject.SetActive(true);
