@@ -16,6 +16,7 @@ public class CharacterSelect : MonoBehaviour
     public void Character1()
     {
         PlayerPrefs.SetInt("character", 0);
+        PlayerPrefs.SetString("characterName", "Steve");
         Time.timeScale = 1f;
         //SceneManager.LoadScene("Level_1");
     }
@@ -23,6 +24,7 @@ public class CharacterSelect : MonoBehaviour
     public void Character2()
     {
         PlayerPrefs.SetInt("character", PlayerPrefs.GetInt("character", + 1));
+        PlayerPrefs.SetString("characterName", "Bob");
         Time.timeScale = 1f;
         //SceneManager.LoadScene("Level_1");
     }
@@ -32,6 +34,6 @@ public class CharacterSelect : MonoBehaviour
         name = newName;
         Debug.Log(name);
         PlayerPrefs.SetString("name", name);
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Round_1");
     }
 }
