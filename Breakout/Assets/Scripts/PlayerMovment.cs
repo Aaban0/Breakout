@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
@@ -10,6 +11,10 @@ public class PlayerMovment : MonoBehaviour
 
     //variable to prevent player from moving off screen
     [SerializeField] float screenLimit = 8f;
+
+    public AudioSource power;
+    public AudioSource spell;
+
 
     void Update()
     {
@@ -26,6 +31,19 @@ public class PlayerMovment : MonoBehaviour
         {
             //players position is moved
             transform.position += Vector3.right * movment * speed * Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("power"))
+        {
+            power.Play();
+        }
+
+        if (collision.gameObject.tag.Equals("spell1"))
+        {
+            spell.Play();
         }
     }
 }

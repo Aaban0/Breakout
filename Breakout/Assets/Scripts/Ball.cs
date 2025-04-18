@@ -29,6 +29,10 @@ public class Ball : MonoBehaviour
     public GameObject youWin;
     public Image healthbar;
 
+    public AudioSource wallSfx;
+    public AudioSource brickSfx;
+    public AudioSource deathSfx;
+
     void Start()
     {
         //gets starting position 
@@ -87,18 +91,22 @@ public class Ball : MonoBehaviour
             {
                 //enemy gets damaged 
                 enemyHealth.Damage(3.34f);
+                brickSfx.Play();
             }
             else if (SceneManager.GetActiveScene().name == "Level_2")
             {
                 enemyHealth.Damage(3.65f);
+                brickSfx.Play();
             }
             else if (SceneManager.GetActiveScene().name == "Level_3")
             {
                 enemyHealth.Damage(3.847f);
+                brickSfx.Play();
             }
             else if (SceneManager.GetActiveScene().name == "Boss")
             {
                 enemyHealth.Damage(3.34f);
+                brickSfx.Play();
             }
 
             //1 in 5 chance for the health boost to spawn
@@ -129,6 +137,11 @@ public class Ball : MonoBehaviour
                 }
             }
         }
+
+        if (collision.gameObject.tag.Equals("Border") || collision.gameObject.tag.Equals("Player"))
+        {
+            wallSfx.Play();
+        }
     }
 
     private void DeathCondition()
@@ -140,7 +153,7 @@ public class Ball : MonoBehaviour
             transform.position = startPosition;
             //resets the velocity to its inital velocity
             rb.velocity = Vector2.down * 8f;
-
+            deathSfx.Play();
             //player is damaged
             health.Damage(30);
             if (healthbar.fillAmount <= 0)

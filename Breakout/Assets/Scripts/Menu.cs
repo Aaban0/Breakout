@@ -11,10 +11,14 @@ public class Menu : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
 
+    public AudioSource clickSfx;
+
     private void Start()
     {
         score = PlayerPrefs.GetInt("score");
         scoreText.text = $"YOU SCORED: {PlayerPrefs.GetInt("score", score)}";
+
+        clickSfx = GetComponent<AudioSource>();
 
         //message.enabled = false;
         
@@ -28,7 +32,8 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetString("name", "Not Aaban");
+        //clickSfx.Play();
+        PlayerPrefs.SetString("name", "---");
         PlayerPrefs.DeleteKey("character");
         SceneManager.LoadScene("CharacterSelect");
         //SceneManager.LoadScene("Level_1");
@@ -37,6 +42,7 @@ public class Menu : MonoBehaviour
 
     public void ResetScores()
     {
+        clickSfx.Play();
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
@@ -55,6 +61,7 @@ public class Menu : MonoBehaviour
 
     public void Quit()
     {
+        clickSfx.Play();
         PlayerPrefs.Save();
         PlayerPrefs.DeleteKey("character");
         //exits the game
@@ -63,6 +70,12 @@ public class Menu : MonoBehaviour
 
     public void MainMenu()
     {
+        clickSfx.Play();
         SceneManager.LoadScene("Main_Menu");
+    }
+
+    public void PlaySFX()
+    {
+        clickSfx.Play();
     }
 }

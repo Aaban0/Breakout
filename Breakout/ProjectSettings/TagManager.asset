@@ -7,6 +7,12 @@ TagManager:
   - Brick
   - Strong Brick
   - Ball
+  - Border
+  - power1
+  - power2
+  - power3
+  - spell1
+  - power
   layers:
   - Default
   - TransparentFX

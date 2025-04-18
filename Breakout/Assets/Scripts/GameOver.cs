@@ -24,7 +24,6 @@ public class GameOver : MonoBehaviour
         gameObject.SetActive(false);
         PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
-        
     }
     public void MainMenu()
     {
