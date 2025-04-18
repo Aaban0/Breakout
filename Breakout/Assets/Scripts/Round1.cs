@@ -24,6 +24,6 @@ public class Round1 : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
