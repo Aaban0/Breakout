@@ -62,6 +62,9 @@ public class Ball : MonoBehaviour
             youWin.SetActive(true);
         }
 
+        //constantly rotates ball
+        transform.Rotate(0, 0, 400 * Time.deltaTime);
+
         DeathCondition();
         //StrongBrick();
     }
