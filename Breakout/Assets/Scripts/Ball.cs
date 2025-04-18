@@ -62,12 +62,6 @@ public class Ball : MonoBehaviour
         {
             youWin.SetActive(true);
         }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            youWin.SetActive(true);
-        }
-
         //constantly rotates ball
         transform.Rotate(0, 0, 400 * Time.deltaTime);
 
